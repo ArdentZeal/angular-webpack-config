@@ -159,6 +159,12 @@ const serverConfig = function(root, settings) {
        */
       path: root(settings.paths.server)
     },
+    
+    // we need this to work around questionable knex imports
+    // so they do not throw errors while webpacking
+    externals: {
+      knex: 'commonjs knex'
+    },
 
     /**
      * Options affecting the normal modules.
