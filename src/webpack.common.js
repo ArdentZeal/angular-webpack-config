@@ -76,15 +76,15 @@ const defaultConfig = function(options, root, settings) {
        * See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
        */
       // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
-      new definePlugin({
-        'ENV': JSON.stringify(options.env),
-        'process.env': {
-          'ENV': JSON.stringify(options.env),
-          'NODE_ENV': JSON.stringify(options.env),
-          'HOST': JSON.stringify(settings.host),
-          'PORT': JSON.stringify(PORT)
-        }
-      }),
+      // new definePlugin({
+      //   'ENV': JSON.stringify(options.env),
+      //  'process.env': {
+      //     'ENV': JSON.stringify(options.env),
+      //    'NODE_ENV': JSON.stringify(options.env),
+      //     'HOST': JSON.stringify(settings.host),
+      //   'PORT': JSON.stringify(PORT)
+      //   }
+      // }),
 
       /**
        * Plugin: CheckerPlugin
